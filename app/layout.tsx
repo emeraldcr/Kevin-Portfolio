@@ -1,35 +1,44 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Kevin Rojas | Web Developer Portfolio",
+  metadataBase: new URL("https://kevin-portafolio-lovat-five-83.vercel.app/"),
+  title: "Kevin Rojas | Software Developer Portfolio",
   description:
-    "Personal portfolio of Kevin Rojas, software engineering student, freelance web developer and adventure tour guide based in San Carlos, Costa Rica.",
+    "Portfolio profesional de Kevin Rojas: estudiante de ingeniería de software, desarrollador web, Python/JavaScript, análisis de datos y proyectos de turismo con La Vieja Adventures.",
+  keywords: [
+    "Kevin Rojas",
+    "software developer Costa Rica",
+    "frontend developer",
+    "Next.js portfolio",
+    "Python developer",
+    "La Vieja Adventures",
+    "San Carlos Costa Rica",
+  ],
+  authors: [{ name: "Kevin Rojas" }],
+  creator: "Kevin Rojas",
   openGraph: {
-    title: "Kevin Rojas | Web Developer Portfolio",
+    title: "Kevin Rojas | Software Developer Portfolio",
     description:
-      "Personal portfolio of Kevin Rojas, software engineering student, freelance web developer and adventure tour guide based in San Carlos, Costa Rica.",
+      "Software engineering student, web developer and adventure tourism collaborator building modern digital experiences from San Carlos, Costa Rica.",
     url: "https://kevin-portafolio-lovat-five-83.vercel.app/",
     siteName: "Kevin Rojas Portfolio",
-    locale: "en_US",
+    locale: "es_CR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kevin Rojas | Web Developer Portfolio",
+    title: "Kevin Rojas | Software Developer Portfolio",
     description:
-      "Software engineering student, freelance web developer and adventure tour guide based in San Carlos, Costa Rica.",
+      "Frontend, backend, Python, JavaScript, data analysis and tourism-related digital products.",
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
   );
 }
